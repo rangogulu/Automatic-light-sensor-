@@ -1,0 +1,28 @@
+const int LEDpin =13;
+const int LDRpin = A0;
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(LEDpin,OUTPUT);
+  pinMode(LDRpin, INPUT);
+
+}
+void loop()
+{ 
+ int LDRstatus =analogRead(LDRpin);
+ if (LDRpinstatus <=500)
+   {
+    digitalWrite(LDRpin,HIGH);
+    Serial.print("current Light intensity value is -");
+    Serial.print(LDRstatus);
+
+}
+else 
+{   
+   digitalWrite(LEDpin,LOW);
+   Serial.print("Current Light intensity is -");
+   Serial.print(LDRstatus);
+
+}
+
+}
